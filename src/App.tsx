@@ -4,20 +4,23 @@ import { useState } from "react";
 import { Todo } from "./model";
 
 const App: React.FC = () => {
-  const [task, setTask] = useState<string>("");
-  const [tasks, setTasks] = useState<Todo[]>([]);
+  const [todo, setTodo] = useState<string>("");
+  const [todos, setTodos] = useState<Todo[]>([]);
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
-    if (task) {
-      setTasks([...tasks, { id: Date.now(), task: task, isCompleted: false }]);
-      setTask("");
+    if (todo) {
+      setTodos([...todos, { id: Date.now(), todo, isCompleted: false }]);
+      setTodo("");
     }
   };
-
+  console.log(todo);
   return (
     <div className="App">
       <h1 className="heading">taskify</h1>
-      <InputField task={task} setTask={setTask} handleAdd={handleAdd} />
+      <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      {todos.map((t) => (
+        <p>{t.todo}</p>
+      ))}
     </div>
   );
 };
