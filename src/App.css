@@ -40,15 +40,23 @@ text-transform: uppercase;
     color: gray;
 }
 
-.todo-text:focus {
-  outline: none;
-}
-
 .icon {
   font-size: 1rem;
   margin: 0 5px;
   cursor: pointer;
 }
+
+.todo-single-text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.todo-single-text:focus {
+  outline: 2px solid rgb(230, 230, 31);
+}
+
 @media (max-width: 1200px) {
   .single-todo {
     width: 45%;
