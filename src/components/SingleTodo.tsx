@@ -2,7 +2,7 @@ import "./styles.css";
 import { Todo } from "../model";
 import { AiFillEdit, AiFillDelete } from "react-icons/ai";
 import { MdDone } from "react-icons/md";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface Props {
   todo: Todo;
@@ -35,6 +35,14 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
     setEdit(false);
   };
 
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [edit]);
+
   return (
     <form className="single-todo" onSubmit={(e) => handleEdit(e, todo.id)}>
       {edit ? (
@@ -42,6 +50,7 @@ const SingleTodo = ({ todo, todos, setTodos }: Props) => {
           type="text"
           value={editTodo}
           onChange={(e) => setEditTodo(e.target.value)}
+          ref={inputRef}
           className="todo-single-text"
         />
       ) : todo.isCompleted ? (
