@@ -68,10 +68,8 @@ text-transform: uppercase;
   justify-content: space-between;
   align-items: flex-start;
   width: 95%;
-  margin: 2rem 0 0 0;
+  margin: 2rem 0;
   gap: 1rem;
-}
-.active {
 }
 .todos-heading {
   font-size: 1.2rem;
@@ -81,7 +79,7 @@ text-transform: uppercase;
 }
 
 .completed {
- 
+ background-color: rgb(235, 103, 27);
 }
 
 @media (max-width: 1100px) {
