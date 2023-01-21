@@ -1,80 +1,9 @@
 .App {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #5b7dc2;
 }
 
-.heading {
-  font-size: 2.5rem;
-  margin: 1.5rem 0;
-color: white;
-z-index: 1;
-text-align: center;
-text-transform: uppercase;
-}
-
-.todos{
-  width: 90%;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
-.single-todo  {
-  display: flex;
-  width: 29%;
-  border-radius: 5px;
-  padding: 10px;
-  margin-top: 15px;
-  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
-}
-
-.todo-text {
-  flex: 1;
-  padding: 2px;
-  border: none;
-  font-size: 1.5rem;
-    color: gray;
-}
-
-.icon {
-  font-size: 1rem;
-  margin: 0 5px;
-  cursor: pointer;
-}
-
-.todo-single-text {
-  flex: 1;
-  padding: 5px;
-  border: none;
-  font-size: 1.2rem;
-  border-radius: 5px;
-}
-.todo-single-text:focus {
-  outline: 2px solid rgb(230, 230, 31);
-}
-
-@media (max-width: 1200px) {
-  .single-todo {
-    width: 45%;
-  }
-}
-@media (max-width: 768px) {
-  .heading {
-    font-size: 1rem 0;
-    font-size: 1.5rem;
-  }
-  .input {
-    width: 90%
-  }
-  .todos {
-    width: 90%;
-  }
-  .single-todo {
-    width: 90%;
-    margin: 5px 0;
-  }
-}
