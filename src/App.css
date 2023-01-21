@@ -7,3 +7,118 @@
   background-color: #5b7dc2;
 }
 
+.heading {
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
+color: white;
+z-index: 1;
+text-align: center;
+text-transform: uppercase;
+}
+
+.todos{
+  width: 47.5%;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: rgb(59,195,205);
+}
+
+.single-todo  {
+  display: flex;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 15px;
+  background-image: url("https://img.freepik.com/free-photo/crumpled-yellow-paper-background-close-up_60487-2390.jpg?size=626&ext=jpg");
+  transition: 0.2s all;
+}
+
+.single-todo:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 5px black;
+}
+
+.todo-text {
+  flex: 1;
+  padding: 2px;
+  border: none;
+  font-size: 1.5rem;
+    color: gray;
+}
+
+.icon {
+  font-size: 1rem;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.todo-single-text {
+  flex: 1;
+  padding: 5px;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 5px;
+}
+.todo-single-text:focus {
+  outline: 2px solid rgb(230, 230, 31);
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 95%;
+  margin: 2rem 0 0 0;
+  gap: 1rem;
+}
+.active {
+}
+.todos-heading {
+  font-size: 1.2rem;
+  margin: .2rem 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+.completed {
+ 
+}
+
+@media (max-width: 1100px) {
+  .todos {
+    width: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1rem 0;
+    font-size: 1.5rem;
+  }
+  .input {
+    width: 90%
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+  .container {
+    flex-direction: column;
+    width: 95%;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .container {
+    flex-direction: column;
+    width: 95%;
+    margin: 15px 10px 0 0;
+  }
+}
+
+@media (max-width: 400px) {
+  
+  .container {
+    margin: 20px 22px 0 10px;
+  }
+}
